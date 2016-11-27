@@ -1,0 +1,28 @@
+    1   2   3           lift
+1   1                    1up
+2   6                    6h
+3       4                4up
+4       7                7h
+5           6            6down
+6           1            1h
+
+
+кейс currentFloor = 5 : targetFloor = 2 вверх HOLD : 3 вниз
+
+проверка HOLD
+    вычисляем направление от целевого этажа     DOWN
+проверка ехать ли по текущему направлению
+проверка ехать ли по противоположному направлению
+    иначе HOLD
+останавливаться ли на следующем
+
+
+7   DOWN   dir=DOWN        checkFloorStatus(6)
+6   NONE   dir=DOWN        checkFloorStatus(5)
+5   NONE   dir=DOWN        checkFloorStatus(4)
+4   NONE   dir=DOWN        checkFloorStatus(3) || isLastFloor(3) false
+3   UP     dir=UP          checkFloorStatus(4)
+2   NONE
+1   NONE
+
+
